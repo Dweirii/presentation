@@ -239,40 +239,6 @@ export default function BackendWorkshop() {
 
       {/* Desktop Sidebar */}
       <SidebarProvider>
-        <Sidebar className="hidden md:flex" variant="floating">
-          <SidebarContent>
-            <div className="p-4">
-              <div className="flex items-center space-x-2 mb-6">
-                <Sparkles className="h-5 w-5 text-primary" />
-                <h2 className="font-bold text-lg">Workshop Sections</h2>
-              </div>
-              <SidebarMenu>
-                {sections.map((section) => (
-                  <SidebarMenuItem key={section.id}>
-                    <SidebarMenuButton
-                      isActive={activeSection === section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={cn(
-                        "transition-all duration-300",
-                        activeSection === section.id && "bg-primary/20 border border-primary/30",
-                      )}
-                    >
-                      {section.icon}
-                      <span>{section.label}</span>
-                      {activeSection === section.id && (
-                        <motion.div
-                          layoutId="activeIndicator"
-                          className="absolute right-2 w-1.5 h-1.5 rounded-full bg-primary"
-                        />
-                      )}
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </div>
-          </SidebarContent>
-        </Sidebar>
-
         <main className="w-screen mx-0 py-8 ">
           {/* Theme Toggle */}
           <div className="fixed top-4 right-4 z-50 hidden md:block">
