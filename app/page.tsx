@@ -361,7 +361,7 @@ export default function BackendWorkshop() {
           </section>
 
           {/* What is Backend Development */}
-          <AnimatedSection ref={sectionRefs.what} id="what" className="py-16 scroll-mt-16">
+          <AnimatedSection id="what" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
@@ -453,7 +453,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Node.js Fundamentals */}
-          <AnimatedSection ref={sectionRefs.nodejs} id="nodejs" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="nodejs" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
@@ -465,7 +465,7 @@ export default function BackendWorkshop() {
               <div className="grid md:grid-cols-2 gap-8">
                 <AnimatedSection delay={0.2} direction="left">
                   <p className="text-lg mb-4">
-                    Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows developers to run
+                    Node.js is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine that allows developers to run
                     JavaScript on the server-side.
                   </p>
                   <h3 className="text-xl font-semibold mb-3 text-gradient-green">Key Features:</h3>
@@ -528,7 +528,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Next.js for Backend */}
-          <AnimatedSection ref={sectionRefs.nextjs} id="nextjs" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="nextjs" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
@@ -594,7 +594,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* TypeScript Explained */}
-          <AnimatedSection ref={sectionRefs.typescript} id="typescript" className="py-16 scroll-mt-16">
+          <AnimatedSection id="typescript" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
@@ -689,7 +689,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* PostgreSQL & Database Concepts */}
-          <AnimatedSection ref={sectionRefs.postgresql} id="postgresql" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="postgresql" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
@@ -789,7 +789,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Prisma & Clerk Overview */}
-          <AnimatedSection ref={sectionRefs.prisma} id="prisma" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="prisma" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20">
@@ -892,7 +892,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Setting Up the Environment */}
-          <AnimatedSection ref={sectionRefs.setup} id="setup" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="setup" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
@@ -963,17 +963,17 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* What's Next */}
-          <AnimatedSection ref={sectionRefs.next} id="next" className="py-16 scroll-mt-16">
+          <AnimatedSection  id="next" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
                   <ArrowRight className="h-5 w-5 text-green-500" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gradient-green">What's Next?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gradient-green">Wha&apos;s Next?</h2>
               </div>
 
               <AnimatedSection delay={0.2} direction="up" className="gradient-border p-6 mb-8">
-                <h3 className="text-xl font-semibold mb-4 text-gradient-green">Recap of What We've Learned</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gradient-green">Recap of What We&apos;ve Learned</h3>
                 <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
                   {[
                     "Backend development fundamentals and architecture",
@@ -1002,7 +1002,7 @@ export default function BackendWorkshop() {
               <AnimatedSection delay={0.4} direction="up" className="text-center">
                 <h3 className="text-2xl font-bold mb-4 text-gradient-green">Get Ready for Hands-On Coding Tomorrow!</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Tomorrow we'll start building a real backend application with all the technologies we've discussed
+                  Tomorrow we&apos;ll start building a real backend application with all the technologies we&apos;ve discussed
                   today.
                 </p>
                 <Button
