@@ -26,11 +26,6 @@ import CodeBlock from "@/components/code-block"
 import AnimatedSection from "@/components/animated-section"
 import ParticleBackground from "@/components/particle-background"
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
