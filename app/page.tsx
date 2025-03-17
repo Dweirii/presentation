@@ -167,7 +167,7 @@ export default function BackendWorkshop() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+  <div className="min-h-screen w-full bg-background text-foreground flex flex-col">
       <ParticleBackground />
 
       {/* Progress Bar */}
@@ -212,7 +212,7 @@ export default function BackendWorkshop() {
               <Menu className="h-5 w-5" />
             </Button>
           </div>
-          <nav className="flex flex-col gap-2">
+          <nav className="flex flex-col gap-2 w-full">
             {sections.map((section) => (
               <Button
                 key={section.id}
@@ -273,7 +273,7 @@ export default function BackendWorkshop() {
           </SidebarContent>
         </Sidebar>
 
-        <main className="container mx-auto px-4 py-8 md:pl-[calc(var(--sidebar-width)_+_1rem)]">
+        <main className="w-screen mx-0 py-8 ">
           {/* Theme Toggle */}
           <div className="fixed top-4 right-4 z-50 hidden md:block">
             <Button
@@ -291,9 +291,9 @@ export default function BackendWorkshop() {
           <section
             ref={sectionRefs.hero}
             id="hero"
-            className="min-h-[90vh] flex flex-col justify-center items-center text-center py-20 relative"
+            className="min-h-[90vh] flex flex-col justify-center gap-x-10 items-center text-center py-20 w-full relative"
           >
-            <div className="absolute inset-0 grid-pattern opacity-20" />
+            <div className="absolute inset-0 grid-pattern opacity-20 w-screen" />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -362,7 +362,7 @@ export default function BackendWorkshop() {
 
           {/* What is Backend Development */}
           <AnimatedSection id="what" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
                   <Server className="h-5 w-5 text-blue-500" />
@@ -453,8 +453,8 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Node.js Fundamentals */}
-          <AnimatedSection  id="nodejs" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+          <AnimatedSection id="nodejs" className="py-16 scroll-mt-16">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
                   <Layers className="h-5 w-5 text-green-500" />
@@ -528,8 +528,8 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Next.js for Backend */}
-          <AnimatedSection  id="nextjs" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+          <AnimatedSection id="nextjs" className="py-16 scroll-mt-16">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
                   <Code className="h-5 w-5 text-blue-500" />
@@ -582,8 +582,17 @@ export default function BackendWorkshop() {
                     <div className="gradient-border p-4 text-sm font-mono">
                       <p className="mb-2 font-medium text-gradient">API Route Structure:</p>
                       <pre className="text-muted-foreground">
-                        app/ ├── api/ │ ├── users/ │ │ └── route.ts {/* GET, POST /api/users */}│ ├── users/[id]/ │ │
-                        └── route.ts {/* GET, PUT, DELETE /api/users/:id */}│ └── auth/ │ └── route.ts{" "}
+                        app/
+                        <br/> 
+                         ├── api/
+                        <br/>
+                         ├── users<br/>
+                          │ <br />
+                          │ ├─ route.ts {/* GET, POST /api/users */}<br/>
+                          │ ├── users/[id]<br/>
+                          └─ route.ts {/* GET, PUT, DELETE /api/users/:id */}<br/>
+                          │ └── auth/ <br/>
+                          │ └── route.ts{" "}
                         {/* POST /api/auth */}
                       </pre>
                     </div>
@@ -594,8 +603,8 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* TypeScript Explained */}
-          <AnimatedSection id="typescript" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+          <AnimatedSection  id="typescript" className="py-16 scroll-mt-16">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
                   <Code className="h-5 w-5 text-blue-500" />
@@ -646,11 +655,11 @@ export default function BackendWorkshop() {
                   <div className="mt-6 space-y-4">
                     <div className="gradient-border p-4">
                       <h4 className="font-medium mb-2 text-gradient">Common TypeScript Types:</h4>
-                      <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground w-full ">
                         {[
                           "<code>string</code>, <code>number</code>, <code>boolean</code>",
-                          "<code>array</code>: <code>string[]</code> or <code>Array&lt;string&gt;</code>",
-                          "<code>object</code>: <code>{ name: string, age: number }</code>",
+                          "<code>array</code>:  <code>Array&lt;string&gt;</code>",
+                          "<code> object </code>: <code> { name: string, age: number }</code>",
                           "<code>union</code>: <code>string | number</code>",
                           "<code>interface</code> and <code>type</code> for custom types",
                         ].map((item, index) => (
@@ -690,7 +699,7 @@ export default function BackendWorkshop() {
 
           {/* PostgreSQL & Database Concepts */}
           <AnimatedSection  id="postgresql" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
                   <Database className="h-5 w-5 text-amber-500" />
@@ -789,8 +798,8 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Prisma & Clerk Overview */}
-          <AnimatedSection  id="prisma" className="py-16 scroll-mt-16">
-            <div className="max-w-4xl mx-auto">
+          <AnimatedSection id="prisma" className="py-16 scroll-mt-16">
+            <div className="max-w-7xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20">
                   <Key className="h-5 w-5 text-purple-500" />
@@ -892,7 +901,7 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* Setting Up the Environment */}
-          <AnimatedSection  id="setup" className="py-16 scroll-mt-16">
+          <AnimatedSection id="setup" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
@@ -907,7 +916,7 @@ export default function BackendWorkshop() {
                     title: "1. Install Node.js",
                     description:
                       "Download and install Node.js from <a href='https://nodejs.org' class='text-primary hover:underline' target='_blank' rel='noopener noreferrer'>nodejs.org</a> or use a version manager like nvm.",
-                    code: "# Using nvm (recommended)\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash\nnvm install 20\nnvm use 20\n\n# Verify installation\nnode --version\nnpm --version",
+                    code: "# Using nvm (recommended)\ncurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash\nnvm install 20\nnvm use 20\n\n# Verify installation\nnode --version\nnpm --version\n#Access Error?\n#Run this command on your terminal\nSet-ExecutionPolicy Unrestricted -Scope CurrentUser",
                   },
                   {
                     title: "2. Install PostgreSQL",
@@ -918,12 +927,12 @@ export default function BackendWorkshop() {
                   {
                     title: "3. Create a Next.js Project",
                     description: "Set up a new Next.js project with TypeScript and Tailwind CSS.",
-                    code: "# Create a new Next.js project\nnpx create-next-app@latest my-backend-app\ncd my-backend-app\n\n# During setup, select:\n# - Yes for TypeScript\n# - Yes for ESLint\n# - Yes for Tailwind CSS\n# - Yes for App Router\n# - No for src/ directory\n# - Yes for import alias (@/*)",
+                    code: "# Create a new Next.js project\nnpx create-next-app@latest my-backend-app\ncd my-backend-app\n\n# During setup, select:\n# - Yes for TypeScript\n# - Yes for ESLint\n# - Yes for Tailwind CSS\n# - Yes for App Router\n# - No for src/ directory\n# - No for import alias (@/*)",
                   },
                   {
                     title: "4. Set Up Prisma",
                     description: "Install and initialize Prisma in your project.",
-                    code: '# Install Prisma\nnpm install prisma --save-dev\nnpx prisma init\n\n# Update DATABASE_URL in .env file\n# DATABASE_URL="postgresql://username:password@localhost:5432/mydb?schema=public"\n\n# After creating your schema\nnpx prisma generate\nnpx prisma db push',
+                    code: '# Install Prisma\nnpm install prisma\nnpx prisma init\n\n# Update DATABASE_URL in .env file\n# DATABASE_URL="postgresql://username:password@localhost:5432/mydb?schema=public"\n\n# After creating your schema\nnpx prisma generate\nnpx prisma db push',
                   },
                   {
                     title: "5. Set Up Clerk",
@@ -963,13 +972,13 @@ export default function BackendWorkshop() {
           </AnimatedSection>
 
           {/* What's Next */}
-          <AnimatedSection  id="next" className="py-16 scroll-mt-16">
+          <AnimatedSection id="next" className="py-16 scroll-mt-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
                   <ArrowRight className="h-5 w-5 text-green-500" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gradient-green">Wha&apos;s Next?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gradient-green">What&apos;s Next?</h2>
               </div>
 
               <AnimatedSection delay={0.2} direction="up" className="gradient-border p-6 mb-8">
@@ -1018,7 +1027,7 @@ export default function BackendWorkshop() {
 
                 <div className="mt-12 flex justify-center">
                   <a
-                    href="#"
+                    href="https://workspace.learnifyjo.com/preview/j57evjfzstsx54qxry2vfmj67s7c7r6j"
                     className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
